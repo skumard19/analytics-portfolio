@@ -1,27 +1,183 @@
-at<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analytics Portfolio</title>
-  </head>
-  <body>
-    This is my Analytics Portfolio test environment
+    <style>
+		body {
+            font-family: Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+		
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #BFDDED;
+        }
+        .header img {
+            height: 150px;
+			padding-left: 50px;
+        }
+        .header-text {
+            text-align: center;
+            flex-grow: 1;
+        }
+		table {
+            width: 100%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+				<!-- /* Style the tab */ -->
+		.tab {
+		  overflow: hidden;
+		  border: 1px solid #ccc;
+		  background-color: #f1f1f1;
+		}
+		<!-- /* Style the buttons inside the tab */ -->
+		.tab button {
+		  background-color: inherit;
+		  float: left;
+		  border: none;
+		  outline: none;
+		  cursor: pointer;
+		  padding: 14px 16px;
+		  transition: 0.3s;
+		}
+		<!-- /* Change background color of buttons on hover */ -->
+		.tab button:hover {
+		  background-color: #ddd;
+		}
+		<!-- /* Create an active/current tablink class */ -->
+		.tab button.active {
+		  background-color: #ccc;
+		}
+		<!-- /* Style the tab content */ -->
+		.tabcontent {
+		  display: none;
+		  padding: 6px 12px;
+		  border: 1px solid #ccc;
+		  border-top: none;
+		}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="ProfilePicture-Blue.png" alt="ProfilePicture">
+        <div class="header-text">
+            <h1>Suresh Kumar D</h1>
+            <h3>Data & Analytics Leader ♦ GTM, Customer Success</h3>
+			
+			<table>
+				<tr>
+					<td><a href="https://www.linkedin.com/in/sureshkumard" target="_blank">linkedin/sureshkumard</a></td>
+					<td><a href="mailto:sureshkumar.bizai@gmail.com">sureshkumar.bizai@gmail.com</a></td>
+					<td>+91 76768 75090</td>
+					<td>Bengaluru, India</td>
+				</tr>
+			</table>
+			
+        </div>
+    </header>
+	
+	<div class="tab">
+		<button class="tablinks" onclick="openTab(event, 'About')" id="defaultOpen">About</button>
+		<button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
+		<button class="tablinks" onclick="openTab(event, 'Certifictions')">Certifictions</button>
+	</div>
+		
+	<div id="About" class="tabcontent">
+		<div class="container">
+			<p> 
+			Hello! I'm <b>Suresh Kumar D</b>, a data enthusiast with a passion for uncovering insights from data.
+			<br><br>
+			With over 18 years of experience, I excel in delivering data-driven actionable insights that enhance business value. I specialize in <b>Data Visualization, Statistical Analysis and Machine Learning</b>. My expertise lies in building scalable analytics solutions that empower agile and data-driven decision-making across organizations. 
+			<br><br>
+			Over the past 5 years, I've successfully built and led high-performing analytics teams, fostering cross-functional partnerships to drive top-line growth and operational efficiency. 
+			</p>
+			
+			<h2 class="section-title">Project Portfolio Links</h2>
+				     <a href="https://skumard19.github.io/sql-portfolio/" target="_blank">SQL Portfolio</a>
+				<br> <a href="https://skumard19.github.io/tableau-portfolio/" target="_blank">Tableau Portfolio</a>
+				<br> <a href="https://skumard19.github.io/datascience-portfolio/" target="_blank">Data Science Portfolio</a>
+				
+			<h2 class="section-title">Skills</h2>
+				
+				<p>      <b>Leadership</b>
+					<br> Team Management, Cross-functional Team Management, Stakeholder Relationship Management
+					<br> Project Management, Coaching and Mentoring
+				</p>
+				
+				<p>      <b>Technical Skills</b>
+					<br> <u>Data Analysis:</u> SQL, PostgreSQL, Python, R 
+					<br> <u>Data Visualization:</u> Tableau, PowerBI 
+					<br> <u>Machine Learning:</u> Numpy, Pandas, Scikit-Learn, XGBoost, TensorFlow, Keras
+					<br> <u>Projet Management:</u> GitLab, Jira, Confluence, Miro
+				</p>			
+		</div>
+	</div>
+		
+	<div id="Projects" class="tabcontent">
+		<div class="container">
+			<h3>Project List</h3>
+			
+			<p>      <b>Domain :</b> Go-to-Market
+			    <br> <b>Category :</b> Machine Learning, Data Science, Data Visualization
+				<br> <b>Skills :</b> SQL, R, Python, Tableau, Salesforce
+			</p>
 
-    Cerifications:
-    <a href="https://www.testdome.com/certificates/1185de42489a414fa4db2508fc4955d7" class="testdome-certificate-stamp gold">
-            <span class="testdome-certificate-name">Suresh Kumar D</span>
-            <span class="testdome-certificate-test-name">SQL</span>
-            <span class="testdome-certificate-card-logo">TestDome<br>Certificate</span>
-        </a>
-        <script>
-            var stylesheet = "https://www.testdome.com/content/certificates/embed.css";
-            link = document.createElement("link");
-            link.href = stylesheet;
-            link.type = "text/css";
-            link.rel = "stylesheet";
-            link.media = "screen,print";
-            document.getElementsByTagName("head")[0].appendChild(link);
-        </script>
-    
-  </body>
+			<table>
+				<tr><th>#</th> <th>Project Name</th> <th>Project Description</th> <th>Outcome / Key Results</th> <th>Audience</th></tr>
+				<tr><td>1</td> <td>Predictive Lead Scoring</td> <td></td> <td></td> <td>BDRs, Marketing</td></tr>
+				<tr><td>1</td> <td>Predictive Lead Scoring</td> <td></td> <td></td> <td>BDRs, Marketing</td></tr>
+				<tr><td>2</td> <td>Propensity to Buy</td> <td></td> <td></td> <td>Sales</td></tr>
+				<tr><td>3</td> <td>Next Best Action</td> <td></td> <td></td> <td>Marketing</td></tr>
+				<tr><td>4</td> <td>Product Affinity Analysis</td> <td></td> <td></td> <td>Marketing</td></tr>
+				<tr><td>5</td> <td>Customer Behavior Analysis</td> <td></td> <td></td> <td>Marketing</td></tr>
+				<tr><td>6</td> <td>Sales Pipeline Analysis</td> <td></td> <td></td> <td>Sales</td></tr>
+			</table>
+		</div>
+	</div>
+
+	<div id="Certifictions" class="tabcontent">
+		<h3>Tab 3</h3>
+		<p>Content for Certifictions Tab.</p>
+	</div>
+
+	
+<!-- <script src="script.js"></script> -->
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+	
+</body>
 </html>

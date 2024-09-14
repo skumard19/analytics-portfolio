@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Analytics Portfolio</title>
+
+	<link rel="stylesheet" type="text/css" href="./cards.css">
+
     <style>
 		body {
             font-family: Roboto, sans-serif;
@@ -20,7 +24,7 @@
             background-color: #BFDDED;
         }
         .header img {
-            height: 150px;
+            height: 140px;
 			padding-left: 50px;
         }
         .header-text {
@@ -66,15 +70,120 @@
 		  border: 1px solid #ccc;
 		  border-top: none;
 		}
+		/* Accordion Slider - Vertical*/
+		.accordion {
+		  box-sizing: border-box;
+		  display: flex;
+		  font-family: Arial, Helvetica, sans-serif;
+		  overflow: hidden;
+		  width: 100%;
+		}
+
+		.accordion-select {
+		  cursor: pointer;
+		  margin: 0;
+		  opacity: 0;
+		  z-index: 1;
+		}
+
+		.accordion-title {
+		  position: relative;
+		}
+
+		.accordion-title:not(:nth-last-child(2))::after {
+		  border: 1px solid transparent;
+		  bottom: 0;
+		  content: "";
+		  left: 0;
+		  position: absolute;
+		  right: 0;
+		  top: 0;
+		}
+
+		.accordion-title span {
+		  bottom: 0px;
+		  box-sizing: border-box;
+		  display: block;
+		  position: absolute;
+		  white-space: nowrap;
+		  width: 100%;
+		}
+
+		.accordion-content {
+		  box-sizing: border-box;
+		  overflow: auto;
+		  position: relative;
+		  transition: margin 0.3s ease 0.1s;
+		}
+
+		.accordion-select:checked + .accordion-title + .accordion-content {
+		  margin-bottom: 0;
+		  margin-right: 0;
+		}
+
+		/* Generated styles starts here */ 
+
+		 .accordion {
+			border-color: #191d23;
+			border-radius: 10px;
+			border-style: solid;
+			border-width: 1px;
+			flex-direction: column;
+			height: auto;
+		} 
+
+		 .accordion-title,
+		.accordion-select  {
+			background-color: #4c5157;
+			color: #ffffff;
+			width: 100%;
+			height: 40px;
+			font-size: 20px;
+		}
+
+		.accordion-select {
+			margin-bottom: -40px;
+			margin-right: -40px;
+		}
+
+		.accordion-title:not(:nth-last-child(2))::after {
+			border-bottom-color: #353332;
+			border-right-color: transparent;
+		} 
+
+		 .accordion-select:hover + .accordion-title,
+		.accordion-select:checked + .accordion-title {
+			background-color: #5689b2;
+		} 
+
+		 .accordion-title span  {	
+			transform: rotate(0deg);
+			-ms-writing-mode: lr-tb;
+			filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+			padding-left: 20px;
+			padding-right: 20px;
+			line-height: 40px;
+		} 
+
+		 .accordion-content {
+			background-color: #ffffff;
+			color: #4c5157;
+			height: 400px;
+			margin-bottom: -400px;
+			margin-right: 0;
+			padding: 10px;
+			width: 100%;
+		}  
     </style>
 </head>
 <body>
     <header class="header">
         <img src="ProfilePicture-Blue.png" alt="ProfilePicture">
         <div class="header-text">
-            <h1>Suresh Kumar D</h1>
-            <h3>Data & Analytics Leader ♦ GTM, Customer Success</h3>
-			
+            <h1> Suresh Kumar D </h1>
+			<h3> Data & Analytics Leader ♦ GTM, Customer Success </h3>
+			<!-- <p>	<b> Data & Analytics Leader ♦ GTM, Customer Success </b> </p> -->
+
 			<table>
 				<tr>
 					<td><a href="https://www.linkedin.com/in/sureshkumard" target="_blank">linkedin/sureshkumard</a></td>
@@ -89,6 +198,7 @@
 	
 	<div class="tab">
 		<button class="tablinks" onclick="openTab(event, 'About')" id="defaultOpen">About</button>
+		<button class="tablinks" onclick="openTab(event, 'Experience')">Experience</button>
 		<button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
 		<button class="tablinks" onclick="openTab(event, 'Certifictions')">Certifictions</button>
 	</div>
@@ -123,31 +233,259 @@
 				</p>			
 		</div>
 	</div>
-		
+
+	<div id="About" class="tabcontent">
+		<div class="container">
+			<p> 
+			Hello! I'm <b>Suresh Kumar D</b>, a data enthusiast with a passion for uncovering insights from data.
+			<br><br>
+			With over 18 years of experience, I excel in delivering data-driven actionable insights that enhance business value. I specialize in <b>Data Visualization, Statistical Analysis and Machine Learning</b>. My expertise lies in building scalable analytics solutions that empower agile and data-driven decision-making across organizations. 
+			<br><br>
+			Over the past 5 years, I've successfully built and led high-performing analytics teams, fostering cross-functional partnerships to drive top-line growth and operational efficiency. 
+			</p>
+			
+			<h2 class="section-title">Project Portfolio Links</h2>
+				     <a href="https://skumard19.github.io/sql-portfolio/" target="_blank">SQL Portfolio</a>
+				<br> <a href="https://skumard19.github.io/tableau-portfolio/" target="_blank">Tableau Portfolio</a>
+				<br> <a href="https://skumard19.github.io/datascience-portfolio/" target="_blank">Data Science Portfolio</a>
+				
+			<h2 class="section-title">Skills</h2>
+				
+				<p>      <b>Leadership</b>
+					<br> Team Management, Cross-functional Team Management, Stakeholder Relationship Management
+					<br> Project Management, Coaching and Mentoring
+				</p>
+				
+				<p>      <b>Technical Skills</b>
+					<br> <u>Data Analysis:</u> SQL, PostgreSQL, Python, R 
+					<br> <u>Data Visualization:</u> Tableau, PowerBI 
+					<br> <u>Machine Learning:</u> Numpy, Pandas, Scikit-Learn, XGBoost, TensorFlow, Keras
+					<br> <u>Projet Management:</u> GitLab, Jira, Confluence, Miro
+				</p>			
+		</div>
+	</div>
+
+	<div id="Experience" class="tabcontent">
+		<h3> Career Journey Map</h3>
+		<br>
+		<h3> Work Experience</h3>
+	</div>
+	
 	<div id="Projects" class="tabcontent">
 		<div class="container">
-			<h3>Project List</h3>
-			
-			<p>      <b>Domain :</b> Go-to-Market
-			    <br> <b>Category :</b> Machine Learning, Data Science, Data Visualization
-				<br> <b>Skills :</b> SQL, R, Python, Tableau, Salesforce
-			</p>
-
-			<table>
-				<tr><th>#</th> <th>Project Name</th> <th>Project Description</th> <th>Outcome / Key Results</th> <th>Audience</th></tr>
-				<tr><td>1</td> <td>Predictive Lead Scoring</td> <td></td> <td></td> <td>BDRs, Marketing</td></tr>
-				<tr><td>2</td> <td>Propensity to Buy</td> <td></td> <td></td> <td>Sales</td></tr>
-				<tr><td>3</td> <td>Next Best Action</td> <td></td> <td></td> <td>Marketing</td></tr>
-				<tr><td>4</td> <td>Product Affinity Analysis</td> <td></td> <td></td> <td>Marketing</td></tr>
-				<tr><td>5</td> <td>Customer Behavior Analysis</td> <td></td> <td></td> <td>Marketing</td></tr>
-				<tr><td>6</td> <td>Sales Pipeline Analysis</td> <td></td> <td></td> <td>Sales</td></tr>
-			</table>
+			<div class="accordion">
+				<input type="radio" name="select" class="accordion-select" checked />
+				<div class="accordion-title"><span>Go-to--Market</span></div>
+				<div class="accordion-content">
+					<div class="cards">
+						<div class="card">
+							<img class="card__image" src=".\31034748.jpg" alt="">
+							<div class="card__content">
+								<p> <b> Predictive Lead Scoring </b> </p> 
+								<p>
+									Identify the leads that are most likely to convert to an Opportunity.
+								</p>
+								<p>
+									<u>Result/Outcome</u>: Improved conversion rates by 20%-50% over business targets.
+								</p>
+								<p>
+									<u>Skills</u>: <i> SQL, Machine Learning, Data Science </i>
+								</p>
+							</div>
+							<div class="card__info"><a href="https://skumard19.github.io/datascience-portfolio/" target="_blank" class="card__link">Project Page on GitHub</a></div>
+						</div>
+					  
+						<div class="card">
+							<img class="card__image" src=".\Project Banner.jpg" alt="">
+							<div class="card__content">
+								<p> <b> Project Name </b> </p> 
+								<p>
+									Project description and objective
+								</p>
+								<p>
+									<u>Result/Outcome</u>: Results are mentioned here.
+								</p>
+								<p>
+									<u>Skills</u>: <i> Tools and Soft skills </i>
+								</p>
+							</div>
+							<div class="card__info"><a href="https://skumard19.github.io/datascience-portfolio/" target="_blank" class="card__link">Project Page on GitHub</a></div>
+						</div>
+						
+						<div class="card">
+							<img class="card__image" src=".\Project Banner.jpg" alt="">
+							<div class="card__content">
+								<p> <b> Project Name </b> </p> 
+								<p>
+									Project description and objective
+								</p>
+								<p>
+									<u>Result/Outcome</u>: Results are mentioned here.
+								</p>
+								<p>
+									<u>Skills</u>: <i> Tools and Soft skills </i>
+								</p>
+							</div>
+							<div class="card__info"><a href="https://skumard19.github.io/datascience-portfolio/" target="_blank" class="card__link">Project Page on GitHub</a></div>
+						</div>
+						
+						<div class="card">
+							<img class="card__image" src=".\Project Banner.jpg" alt="">
+							<div class="card__content">
+								<p> <b> Project Name </b> </p> 
+								<p>
+									Project description and objective
+								</p>
+								<p>
+									<u>Result/Outcome</u>: Results are mentioned here.
+								</p>
+								<p>
+									<u>Skills</u>: <i> Tools and Soft skills </i>
+								</p>
+							</div>
+							<div class="card__info"><a href="https://skumard19.github.io/datascience-portfolio/" target="_blank" class="card__link">Project Page on GitHub</a></div>
+						</div>
+						
+						<div class="card">
+							<img class="card__image" src=".\Project Banner.jpg" alt="">
+							<div class="card__content">
+								<p> <b> Project Name </b> </p> 
+								<p>
+									Project description and objective
+								</p>
+								<p>
+									<u>Result/Outcome</u>: Results are mentioned here.
+								</p>
+								<p>
+									<u>Skills</u>: <i> Tools and Soft skills </i>
+								</p>
+							</div>
+							<div class="card__info"><a href="https://skumard19.github.io/datascience-portfolio/" target="_blank" class="card__link">Project Page on GitHub</a></div>
+						</div>
+						
+						<div class="card">
+							<img class="card__image" src=".\Project Banner.jpg" alt="">
+							<div class="card__content">
+								<p> <b> Project Name </b> </p> 
+								<p>
+									Project description and objective
+								</p>
+								<p>
+									<u>Result/Outcome</u>: Results are mentioned here.
+								</p>
+								<p>
+									<u>Skills</u>: <i> Tools and Soft skills </i>
+								</p>
+							</div>
+							<div class="card__info"><a href="https://skumard19.github.io/datascience-portfolio/" target="_blank" class="card__link">Project Page on GitHub</a></div>
+						</div>						
+					</div>					
+				</div> 
+				
+				<input type="radio" name="select" class="accordion-select" />
+				<div class="accordion-title"><span>Customer Experience</span></div>
+				<div class="accordion-content">
+					<div class="cards">
+						<div class="card">
+							<img class="card__image" src=".\Project Banner.jpg" alt="">
+							<div class="card__content">
+								<p> <b> Project Name </b> </p> 
+								<p>
+									Project description and objective
+								</p>
+								<p>
+									<u>Result/Outcome</u>: Results are mentioned here.
+								</p>
+								<p>
+									<u>Skills</u>: <i> Tools and Soft skills </i>
+								</p>
+							</div>
+							<div class="card__info"><a href="https://skumard19.github.io/datascience-portfolio/" target="_blank" class="card__link">Project Page on GitHub</a></div>
+						</div>
+						
+						<div class="card">
+							<img class="card__image" src=".\Project Banner.jpg" alt="">
+							<div class="card__content">
+								<p> <b> Project Name </b> </p> 
+								<p>
+									Project description and objective
+								</p>
+								<p>
+									<u>Result/Outcome</u>: Results are mentioned here.
+								</p>
+								<p>
+									<u>Skills</u>: <i> Tools and Soft skills </i>
+								</p>
+							</div>
+							<div class="card__info"><a href="https://skumard19.github.io/datascience-portfolio/" target="_blank" class="card__link">Project Page on GitHub</a></div>
+						</div>
+						
+						<div class="card">
+							<img class="card__image" src=".\Project Banner.jpg" alt="">
+							<div class="card__content">
+								<p> <b> Project Name </b> </p> 
+								<p>
+									Project description and objective
+								</p>
+								<p>
+									<u>Result/Outcome</u>: Results are mentioned here.
+								</p>
+								<p>
+									<u>Skills</u>: <i> Tools and Soft skills </i>
+								</p>
+							</div>
+							<div class="card__info"><a href="https://skumard19.github.io/datascience-portfolio/" target="_blank" class="card__link">Project Page on GitHub</a></div>
+						</div>												
+					</div>
+				</div> 
+				
+				<input type="radio" name="select" class="accordion-select" />
+				<div class="accordion-title"><span>Product Dev & Engineeing Services</span></div>
+				<div class="accordion-content">
+					<div class="cards">
+						<div class="card">
+							<img class="card__image" src=".\Project Banner.jpg" alt="">
+							<div class="card__content">
+								<p> <b> Project Name </b> </p> 
+								<p>
+									Project description and objective
+								</p>
+								<p>
+									<u>Result/Outcome</u>: Results are mentioned here.
+								</p>
+								<p>
+									<u>Skills</u>: <i> Tools and Soft skills </i>
+								</p>
+							</div>
+							<div class="card__info"><a href="https://skumard19.github.io/datascience-portfolio/" target="_blank" class="card__link">Project Page on GitHub</a></div>
+						</div>
+						
+						<div class="card">
+							<img class="card__image" src=".\Project Banner.jpg" alt="">
+							<div class="card__content">
+								<p> <b> Project Name </b> </p> 
+								<p>
+									Project description and objective
+								</p>
+								<p>
+									<u>Result/Outcome</u>: Results are mentioned here.
+								</p>
+								<p>
+									<u>Skills</u>: <i> Tools and Soft skills </i>
+								</p>
+							</div>
+							<div class="card__info"><a href="https://skumard19.github.io/datascience-portfolio/" target="_blank" class="card__link">Project Page on GitHub</a></div>
+						</div>												
+					</div>
+				</div> 
+				
+			</div>
 		</div>
 	</div>
 
 	<div id="Certifictions" class="tabcontent">
 		<h3>Tab 3</h3>
-		<p>Content for Certifictions Tab.</p>
+		<p>Content for Certifictions Tab.</p>		  
 	</div>
 
 	
